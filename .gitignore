@@ -10,3 +10,4 @@ test-ledger
 # client/__init__.py
 # client/program_id.py
 client/__pycache__
+client/instructions/__pycache__

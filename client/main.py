@@ -3,7 +3,6 @@ from solana.rpc.async_api import AsyncClient
 from solana.publickey import PublicKey
 from solana.keypair import Keypair
 from anchorpy import Program, Provider, Wallet
-from anchorpy.utils.token import get_token_account
 from anchorpy.program.context import Context
 from solana.sysvar import SYSVAR_RENT_PUBKEY
 
@@ -12,6 +11,7 @@ import program_id
 from spl.token.instructions import get_associated_token_address
 
 from spl.token.constants import ASSOCIATED_TOKEN_PROGRAM_ID, TOKEN_PROGRAM_ID
+
 NFT_TITLE = 'Rohit Special NFT!';
 NFT_SYMBOL = 'RSN'
 NFT_URL = 'https://raw.githubusercontent.com/RohitSingh107/anchor-nft-mint/main/assets/example.json'
@@ -75,49 +75,4 @@ async def main():
 
 
 asyncio.run(main())
-
-# from anchorpy import Program, Provider, Wallet
-# from .instructions.mint import MintAccounts, MintArgs, mint
-# import anchorpy
-
-# def main():
-
-
-
-#     mintArgs = MintArgs(metadata_title= "Rohit Special Token", metadata_symbol= "RST", metadata_url= "https://raw.githubusercontent.com/RohitSingh107/anchor-nft-mint/main/assets/example.json") 
-
-#     # accounts = MintAccounts(
-#     #         metadata= "",
-#     #         master_edition= "",
-#     #         mint = "",
-#     #         token_account= "",
-#     #         mint_authority= "",
-#     #         rent = "",
-#     #         system_program= "",
-#     #         token_program= '',
-#     #         associated_token_program= "",
-#     #         token_metadata_program= ""
-#     #         )
-
-#     # accounts = MintAccounts(
-#     #         metadata= "",
-#     #         master_edition= "",
-#     #         mint = "",
-#     #         token_account= "",
-#     #         mint_authority= "",
-#     #         rent = "",
-#     #         system_program= "",
-#     #         token_program= '',
-#     #         associated_token_program= "",
-#     #         token_metadata_program= ""
-#     #         )
-#     # inx = mint(mintArgs, accounts)
-
-#     metadata_address = Program.at()
-    
-
-# if __name__ == '__main__':
-#     main()
-
-
     
